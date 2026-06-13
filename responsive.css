@@ -1,0 +1,68 @@
+@media (max-width: 1200px) {
+  .search {
+    width: 460px;
+  }
+}
+
+/* Tablets (<768px) */
+@media (max-width : 768px) {
+    .categories{
+        display: none;
+    }
+    .videos {
+        width: 100vw;
+    }
+    .navbar {
+        padding: 0 10px;
+        gap: 8px;
+    }
+    .search {
+        width: 200px;
+    }
+    .video-grid {
+        grid-template-columns:  repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+}
+/* mobile(<480px) */
+@media (max-width : 480px) {
+    .navbar {
+        padding: 0 8px;
+        height: 52px;
+    }
+    .navbar .searchbar .search{
+        display: none;
+    }
+    .searchbar > .material-icons:last-child {
+        display: none;
+    }
+    .navigation-icons .material-icons:nth-child(1), 
+    .navigation-icons .material-icons:nth-child(2),
+    .navigation-icons .material-icons:nth-child(3) {
+        display: none;
+    }
+    .video-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 8px;
+        padding: 8px;
+    }
+    .video .profile img {
+        width: 30px;
+        height: 30px;
+    }
+    .video {
+        padding:8px;
+    }
+    .video .video-details p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .video .posted-by {
+        font-size : 12px;
+        line-height: 18px;
+    }
+
+}
+
+
