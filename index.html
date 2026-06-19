@@ -11,6 +11,23 @@
     
 </head>
 <body>
+    <!-- Cursor Custom Feature : Login Feature -->
+     <!-- Login Overlay -->
+    <div class="login-overlay" id="login-overlay">
+    <div class="login-box">
+        <div class="login-header">
+        <img src="icons/angellist-svgrepo-com.svg" alt="FakeTube logo">
+        <h2>Sign in to FakeTube</h2>
+        <p>Continue to FakeTube.Inc</p>
+        </div>
+        <div class="login-buttons">
+            <button type="button" class="login-btn"id="sign-in-btn">Sign in</button>
+            <button type="button" class="decline-btn" id="decline-login">Decline</button>
+        </div>
+
+        <p class="login-hint">Sign In or Decline to Continue FakeTube</p>
+    </div>
+    </div>
   <!-- Navigation Bar -->
     <div class="navbar">
       <div class="logo">
@@ -407,7 +424,8 @@
           </div>
       </div>
     </div>
-    <!-- Feature Button -->
+    <!--  -->
+    <!-- Custom Feature Button : dark mode button without cursor -->
     <button class="theme-toggle .active" id ="theme-toggle">Dark Mode</button>
      <script>
         const button = document.getElementById("theme-toggle");
@@ -420,7 +438,20 @@
             }
         })
      </script>
+     <!-- Cursor Custom Feature : Login Feature and Video Search Feature -->
      <script src="script.js">
+     </script>
+     <script>
+        // Login popup — both buttons close it and show the site
+        const loginOverlay = document.getElementById("login-overlay");
+        const signInBtn = document.getElementById("sign-in-btn");
+        const declineBtn = document.getElementById("decline-login");
+
+        function enterWebsite() {
+            loginOverlay.classList.add("hidden");
+        }
+        signInBtn.addEventListener("click", enterWebsite);
+        declineBtn.addEventListener("click", enterWebsite);
      </script>
 </body>
 </html>
